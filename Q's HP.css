@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    background: radial-gradient(circle at center, #5C5C5C, #000000);
+    font-family: Arial, sans-serif;
+    color: #e6e6e6;
+	overflow: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+}
+
+.center-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1 {
+    font-size: 70px;
+    color: #c6b8ff; 
+    letter-spacing: 3px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: silver;
+    margin-top: -10px;
+}
+
+.links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border: 2px solid #6a6a6a;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    background: rgba(80, 80, 80, 0.2);
+}
+
+.links a:hover {
+    border-color: #bb86fc;
+    color: #bb86fc;
+    transform: scale(1.08);
+}
+
+
+.logo-container {
+     display: flex;
+    align-items: center; 
+    gap: 10px;              
+    position: absolute;
+}
+
+.logos {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spin {
+    animation: rotate 6s linear infinite;
+}
+
+.spin-slow {
+    animation: rotate 12s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.credits {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #5C5C5C;
+}
+
+#counter {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 17px;
+    color: ##c6b8ff;
+    opacity: 0.7;
+}
+
+#music-box {
+    text-align: center;
+    padding: 20px;
+    color: #c6b8ff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#music-box audio {
+    width: 250px;
+    margin-top: 10px;
+}
