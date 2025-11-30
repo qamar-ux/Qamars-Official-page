@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <title>Qamar | Official Site</title>
+    <link rel="stylesheet" href="Q's HP.css">
+
+<script>
+    window.onload = function() {
+        window.scrollTo(0, 0);
+    };
+</script>
+</head>
+<body>
+
+    <div class="logo-container">
+	    <div class="logos">
+        <img src="IMG/louis-vuitton-seeklogo.png" class="logo spin-slow">
+		</div>
+    </div>
+
+    <div class="center-box">
+        <h1>𝚀̷𝙰̷𝙼̷𝙰̷𝚁̷</h1>
+        <p class="subtitle">☆☆☆☆☆☆☆☆☆☆</p>
+
+        <div class="links">
+            <a href="https://steamcommunity.com/profiles/76561198774070859/" target="_blank">Steam</a>
+            <a href="https://www.roblox.com/share?code=73b3e2ae791faa4dbb9dfc3a8f7a2c82&type=Profile&source=ProfileShare&stamp=1764509480375" target="_blank">Roblox</a>
+            <a href="https://www.tiktok.com/@018.qamar?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a>
+            <a href="https://www.instagram.com/018.qamar?igsh=cGRoeTB3aGIwNzRi&utm_source=qr" target="_blank">Instagram</a>
+            <a href="https://snapchat.com/t/UcKuv8gP" target="_blank">Snapchat</a>
+        </div>
+
+        <p class="credits">Soundtrack: ESDEE Kid – full album loop</p>
+		<p><small>© QAMAR 2025</small></p>
+    </div>
+
+<div id="counter" style="margin-top:50px; font-size:14px; text-align:center; color:##c6b8ff;"></div>
+
+<script>
+let count = localStorage.getItem("visits");
+if (!count) count = 0;
+
+count++;
+localStorage.setItem("visits", count);
+
+document.getElementById("counter").innerText =
+"👁: " + count;
+</script>
+
+<div id="musicPlayerContainer" style="
+    position: fixed;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    padding: 10px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+">
+
+<div id="music-box">
+  <audio id="audioPlayer" src="lv_sandals.mp3" loop></audio>
+  <p>Soundtrack: LV Sandals – ESDEEKid</p>
+  <button onclick="togglePlay()">▶️</button>
+  <input id="volumeControl" type="range" min="0" max="1" step="0.01" value="0.5" onchange="setVolume(this.value)">
+</div>
+</div>
+
+<script>
+  const audio = document.getElementById('audioPlayer');
+
+  // Play/Pause
+  function togglePlay() {
+    if(audio.paused) {
+      audio.play().catch(e => alert("Browser can't play this audio"));
+    } else {
+      audio.pause();
+    }
+  }
+
+  // Volume slider
+  function setVolume(value) {
+    audio.volume = value;
+  }
+
+  // Set initial volume and attempt autoplay
+  audio.volume = 0.5;
+  audio.loop = true;
+  audio.play().catch(e => console.log("Autoplay blocked, press play"));
+</script>
+
+<script>
+    // VISITOR COUNTER (simulated per device)
+    let count = parseInt(localStorage.getItem('visitorCount')) || 0;
+    count++;
+    localStorage.setItem('visitorCount', count);
+    document.getElementById('visitorCount').textContent = count;
+</script>
+
+</body>
+</html>
